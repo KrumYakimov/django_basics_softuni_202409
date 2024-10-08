@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do App</title>
+</head>
+<body>
+    
+    <div>
+        <h1>ToDos</h1>
+    
+        {% if tasks %}
+            <p>Yo have {{ tasks|length }} tasks:</p>
+        {% endif %}
+
+        <form method="get" action="/">
+            <label>
+                <input type="text" name="title_filter" value="{{ title_filter }}" placeholder="Search">
+            </label>
+            <button type="submit">Search</button>
+        </form>
+    
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+            {% empty %}
+                <li>No Result</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

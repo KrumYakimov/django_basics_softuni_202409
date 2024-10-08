@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Departments</h1>
+    
+    {% if departments %}
+    <ul>
+        {% for department in departments %}
+        <li>{{ department.name }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No departments found.</p>
+    {% endif %}
+</body>
+</html>

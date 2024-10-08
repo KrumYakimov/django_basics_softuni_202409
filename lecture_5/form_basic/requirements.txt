@@ -1,0 +1,9 @@
+asgiref==3.8.1
+Django==5.1.1
+psycopg2-binary==2.9.9
+python-decouple==3.8
+sqlparse==0.5.1
+
+pip~=24.0
+setuptools~=65.5.0
+Markdown~=3.7
