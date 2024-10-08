@@ -1,0 +1,18 @@
+{% extends "common/base.html" %}
+{% load uppercase %}
+
+{% block styles %}
+    {{ block.super }}
+
+    <style>
+        h1 {
+            color: #405cf5;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% uppercase %}
+    <h1>Community Posts</h1>
+    {% enduppercase %}
+{% endblock %}
