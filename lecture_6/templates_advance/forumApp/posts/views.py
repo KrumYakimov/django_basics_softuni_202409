@@ -1,6 +1,4 @@
-from datetime import datetime
 
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from forumApp.posts.forms import PostCreateForm, PostDeleteForm, PostEditForm, SearchForm
@@ -8,19 +6,11 @@ from forumApp.posts.models import Post
 
 
 def index(request):
-    # form = PersonForm(request.POST or None)
-    #
-    # if request.method == "POST":
-    #     print(request.POST["person_name"])
-    #
-    # if form.is_valid():
-    #     print(form.cleaned_data["person_name"])
-    #
     context = {
         "my_form": ""
     }
 
-    return render(request, 'base.html', context)
+    return render(request, 'common/index.html', context)
 
 
 def dashboard(request):
@@ -62,7 +52,7 @@ def create_post(request):
         "form": form
     }
 
-    return render(request, "posts/create_post.html", context)
+    return render(request, "posts/create-post.html", context)
 
 
 def edit_post(request, pk: int):

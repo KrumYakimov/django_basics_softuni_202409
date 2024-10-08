@@ -11,11 +11,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Delete a Post</h1>
-    <form action="{% url "delete-post" post.pk %}" method="post">
+    <h1>Create a Post</h1>
+    <form action="{% url "create-post" %}" method="post">
         {{ form }}
         {% csrf_token %}
         <button class="button-9">Submit</button>
     </form>
 {% endblock %}
-    

@@ -1,4 +1,5 @@
 {% extends "common/base.html" %}
+{% load uppercase %}
 
 {% block styles %}
     {{ block.super }}
@@ -11,10 +12,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Edit a Post</h1>
-    <form action="{% url "edit-post" post.pk %}" method="post">
-        {{ form }}
-        {% csrf_token %}
-        <button class="button-9">Submit</button>
-    </form>
+    {% uppercase %}
+    <h1>Community Posts</h1>
+    {% enduppercase %}
 {% endblock %}
